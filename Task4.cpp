@@ -3,10 +3,21 @@
 using namespace std;
 int main()
 {
-	int i=1;
+	int count=20;
+
 	do{
-			cout<<i<<endl;
-			i++;
-	}while(i<=10);
-	return 0;
+		if(count%2==0)
+		count--;
+		continue;
+
+	if (count == 5)
+	{
+	cout<<"looped stopped at"<<count<<"."<<endl;
+	break;
+}
+	cout<<count<<"";
+	count--;
+
+}	while(count=>0);
+return 0;
 }
