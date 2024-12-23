@@ -1,24 +1,22 @@
-
 #include <iostream>
 using namespace std;
-int main() {
-    int num1, num2, num3, num4, num5;
-    int mini;
-    cout << "Please enter 5 numbers respectively: ";
-    cin >> num1 >> num2 >> num3 >> num4 >> num5;
-    mini = num1;
-    if (num2 < mini) {
-        mini = num2;
+int main(){
+    int num;
+
+    cout << "Enter number:";
+    cin >> num;
+
+    if (num % 2 == 0){
+        if ( num % 3 == 0){
+            cout << "Number is even and divisible by three";
+        }
+        else{
+            cout << "Number is only even, not divisible by three";
+        }
     }
-    else if (num3 < mini) {
-        mini = num3;
+    else{
+            cout << "number is nor even nor divisible by three";
+        }
+        return 0;
     }
-    else if (num4 < mini) {
-        mini = num4;
-    }
-    else if (num5 < mini) {
-        mini = num5;
-    }
-    cout << "The minimum number is : " << mini << endl;
-    return 0;
-}
+
