@@ -2,16 +2,42 @@
 #include <iostream>
 using namespace std;
 int main() {
-    int salary,grade;
-    cout << "Enter the employee's salary: ";
-    cin >> salary;
-    cout << "Enter the employee's grade: ";
-    cin >> grade;
-    if (grade > 15) {
-        salary = salary * 0.50;
-    } else if (grade < 15) {
-        salary = salary * 0.25;
+    double marks_obtained, total_marks;
+    int choice;
+    cout << "Enter the marks obtained: ";
+    cin >> marks_obtained;
+    cout << "Enter the total marks: ";
+    cin >> total_marks;
+    cout << "Press 1 to calculate the Percentage." << endl;
+    cout << "Press 2 to display the Grade." << endl;
+    cin >> choice;
+    if (choice == 1) {
+        double percentage = (marks_obtained / total_marks) * 100;
+        cout << "Percentageis" << percentage << "%" << endl;
     }
-    cout << "The employee's salary is: " << salary << endl;
+    else if (choice == 2) {
+        double percentage = (marks_obtained / total_marks) * 100;
+        char grade;
+        if (percentage >= 90) {
+            grade = 'A';
+        } else if
+            (percentage >= 80) {
+            grade = 'B';
+        } else if
+            (percentage >= 70) {
+            grade = 'C';
+        } else if
+            (percentage >= 60) {
+            grade = 'D';
+        }
+        else{
+            grade = 'F';
+        }
+        cout << "Grade: " << grade << endl;
+    }
+    else{
+        cout << "Invalid choice." << endl;
+    }
     return 0;
 }
+
