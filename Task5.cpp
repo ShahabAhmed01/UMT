@@ -1,13 +1,17 @@
+
 #include <iostream>
 using namespace std;
-int main()
-{
-    int num1, num2, min_num;
-    cout << "Enter First Number" << endl;
-    cin >> num1;
-    cout << "Enter Second Number" << endl;
-    cin >> num2;
-    (num1 > num2)? min_num = num2 : min_num = num1;
-    cout << "Minimumm Number: " << min_num;
+int main() {
+    int salary,grade;
+    cout << "Enter the employee's salary: ";
+    cin >> salary;
+    cout << "Enter the employee's grade: ";
+    cin >> grade;
+    if (grade > 15) {
+        salary = salary * 0.50;
+    } else if (grade < 15) {
+        salary = salary * 0.25;
+    }
+    cout << "The employee's salary is: " << salary << endl;
     return 0;
 }
