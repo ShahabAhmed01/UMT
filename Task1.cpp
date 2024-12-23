@@ -1,16 +1,17 @@
+
 #include <iostream>
- using namespace std;
-
-int main(){
-    char charac;
-    cout << "Input a character:";
-    cin >> charac;
-    if ( charac == 'a' || charac == 'e' || charac == 'i' || charac == 'o' || charac == 'u'){
-        cout << "Entered character is a vowel";
+using namespace std;
+int main()
+{
+    int n, i, sum;
+     sum = 0;
+	cout << "Input a number: ";
+	cin >> n;
+    for (i = 1; i <= n; i++)
+    {
+        cout << i << "\t ";
+		sum = sum + i;
     }
-    else{
-        cout << "Entered character is a Consonant";
-    }
+    cout << "\n The sum of the natural numbers is: " << sum << endl;
     return 0;
-
 }
