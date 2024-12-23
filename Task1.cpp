@@ -3,15 +3,22 @@
 using namespace std;
 int main()
 {
-    int n, i, sum;
-     sum = 0;
-	cout << "Input a number: ";
-	cin >> n;
-    for (i = 1; i <= n; i++)
+    int number, maxi = 0;
+    cout << "Enter a number:";
+    cin >> number;
+    for (int i = 1; i <= number; i++)
     {
-        cout << i << "\t ";
-		sum = sum + i;
+        if (number % i == 0)
+        {
+            maxi = maxi + 1;
+        }
     }
-    cout << "\n The sum of the natural numbers is: " << sum << endl;
+    if (maxi <= 2){
+        cout << "It is a prime number" ;
+    }
+    else
+     {
+        cout << "It is composite";
+    }
     return 0;
 }
