@@ -1,21 +1,19 @@
 
-#include <iostream>
+#include<iostream>
 using namespace std;
 int main()
 {
-    int num1, num2, maxi, lcm;
-    cout << "Enter first number: ";
-    cin >> num1;
-    cout << "Enter second number: ";
-    cin >> num2;
-    maxi = (num1 > num2)? num1 : num2;
-    for (lcm=maxi; ; lcm++)
-    {
-        if (lcm % num1 == 0 && lcm % num2 == 0)
-        {
-            break;
-        }
-    }
-    cout << "LCM is: "<< lcm;
-    return 0;
-}
+	int num;
+	int sum=0;
+	cout<<"enter any number:";
+	cin>>num;
+	while(num>0){
+
+		int digit = num % 10;
+		sum = sum + digit;
+		num/=10;
+
+	}
+
+	cout<<"the sum of digit is:"<<sum<<endl;
+ }
