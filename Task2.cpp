@@ -1,26 +1,24 @@
-
-#include<iostream>
+#include <iostream>
 using namespace std;
-
-int main() {
-    int numCount;
-	int number;
-    int evenCount = 0;
-    cout << "Enter the number of integers you want to input: ";
-    cin >> numCount;
-    if (numCount <= 0) {
-        cout << "Please enter a positive integer." << endl;
-        return 1;
-    }
-    int i = 0;
-    do {
-        cout << "Enter integer " << (i + 1) << ": ";
-        cin >> number;
-        if (number % 2 == 0) {
-            evenCount++;
-        }
-        i++;
-    } while (i < numCount);
-    cout << "Count of even numbers entered: " << evenCount << endl;
-    return 0;
+int presentt(int x, int y)
+{
+    int z = x - y;
+    // z = present, x = total, y = absent
+    return z;
+}
+int absentt(int x, int p)
+{
+    // formula to find 14 percent of 50 is: (14/100)*50
+    // (14/100)*50 = 7
+    int y = (p / 100.0) * x;
+    return y;
+}
+int main()
+{
+    int total=50,absent,present;
+    int percentage = 14;
+    absent = absentt(total, percentage);
+    present = presentt(total, absent);
+    cout << "Number of students absent on a particular day = " << absent << endl;
+    cout << "The number of students present = " << present << endl;
 }
